@@ -49,6 +49,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LibraryComponent } from './library/library.component';
 import { CredentialsComponent } from './credentials/credentials.component';
+import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { CredentialsComponent } from './credentials/credentials.component';
     DashboardComponent,
     LibraryComponent,
     CredentialsComponent,
+    ProfileDialogComponent,
   ],
   imports: [
     BrowserModule,

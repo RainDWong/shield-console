@@ -8,15 +8,24 @@
     <a mat-button [routerLink]="[{outlets: {navcontent: ['dashboard']}}]">
       <span class="navbar-app-name">Shield APIs</span>
     </a>
+
     <span class="toolbar-spacer"></span>
+
+    <button mat-icon-button matTooltip="Help">
+      <mat-icon>help</mat-icon>
+    </button>
     <button mat-icon-button matTooltip="Notifications">
       <mat-icon matBadge="5" matBadgeColor="accent">notifications</mat-icon>
     </button>
 
-    <button mat-icon-button matTooltip="Settings">
+    <button mat-icon-button matTooltip="Settings" [matMenuTriggerFor]="beforeMenu">
       <mat-icon>more_vert</mat-icon>
     </button>
-    <button mat-icon-button matTooltip="Account">
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Preferences</button>
+      <button mat-menu-item>Terms of service</button>
+    </mat-menu>
+    <button mat-icon-button matTooltip="Account" (click)="openProfileDialog()">
       <mat-icon>account_circle</mat-icon>
     </button>
 <!--    <button mat-icon-button>-->

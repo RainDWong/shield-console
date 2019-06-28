@@ -1,13 +1,15 @@
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ActivatedRoute} from '@angular/router';
+import {MatDialog} from '@angular/material';
+import {ProfileDialogComponent} from './profile-dialog/profile-dialog.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
+export class AppComponent implements OnDestroy {
   title = 'shield-console';
   mobileQuery: MediaQueryList;
 
@@ -29,7 +31,8 @@ export class AppComponent implements OnDestroy{
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    public dialog: MatDialog
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -41,4 +44,16 @@ export class AppComponent implements OnDestroy{
   }
 
 
+  openProfileDialog() {
+    const dialogRef = this.dialog.open(ProfileDialogComponent, {
+      width: '300px',
+      panelClass: 'custom-dialog-container',
+      position: {top: '57px', right: '10px'},
+      data: {name: 'aaaa'}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
