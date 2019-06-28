@@ -41,7 +41,16 @@ h1.navbar-app-name {
 }
 
 .sidenav-left a {
-  font-size: 13px;
+  font-size: 15px;
+  margin-right: 20px;
+}
+.sidenav-left mat-icon {
+  margin-right: 20px;
+  /*width: 5px;*/
+}
+
+.sidenav-right {
+  padding-left: 20px;
 }
 
 .toolbar-icon {

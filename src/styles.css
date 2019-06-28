@@ -19,3 +19,9 @@ body {
 .custom-dialog-container .mat-dialog-container {
   padding: 15px;
 }
+
+.credentials_content .mat-tab-label {
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}

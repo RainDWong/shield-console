@@ -28,9 +28,9 @@
     <button mat-icon-button matTooltip="Account" (click)="openProfileDialog()">
       <mat-icon>account_circle</mat-icon>
     </button>
-<!--    <button mat-icon-button>-->
-<!--      <img src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"/>-->
-<!--    </button>-->
+    <!--    <button mat-icon-button>-->
+    <!--      <img src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"/>-->
+    <!--    </button>-->
   </mat-toolbar>
 
   <mat-sidenav-container class="navbar-sidenav-container"
@@ -42,13 +42,23 @@
         <!--        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">-->
         <!--          {{nav}}-->
         <!--        </a>-->
-        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['dashboard']}}]">Dashboard</a>
-        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['library']}}]">Library</a>
-        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['credentials']}}]">Credentials</a>
+
+        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['dashboard']}}]">
+          <mat-icon>dashboard</mat-icon>
+          Dashboard
+        </a>
+        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['library']}}]">
+          <mat-icon>list</mat-icon>
+          Library
+        </a>
+        <a mat-list-item [routerLink]="[{outlets: {navcontent: ['credentials']}}]">
+          <mat-icon>vpn_key</mat-icon>
+          <span>Credentials</span>
+        </a>
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content class="sidenav-right">
       <router-outlet name="navcontent"></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
