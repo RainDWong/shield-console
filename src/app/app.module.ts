@@ -50,6 +50,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LibraryComponent } from './library/library.component';
 import { CredentialsComponent } from './credentials/credentials.component';
 import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
+import { TabCredentialsComponent } from './credentials/tab-credentials/tab-credentials.component';
+import { TabOauthConsentComponent } from './credentials/tab-oauth-consent/tab-oauth-consent.component';
+import { TabDomainVerfComponent } from './credentials/tab-domain-verf/tab-domain-verf.component';
 
 
 @NgModule({
@@ -59,6 +62,9 @@ import { ProfileDialogComponent } from './profile-dialog/profile-dialog.componen
     LibraryComponent,
     CredentialsComponent,
     ProfileDialogComponent,
+    TabCredentialsComponent,
+    TabOauthConsentComponent,
+    TabDomainVerfComponent,
   ],
   imports: [
     BrowserModule,

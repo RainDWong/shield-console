@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {MatDialog} from '@angular/material';
 import {ProfileDialogComponent} from './profile-dialog/profile-dialog.component';
 
@@ -31,12 +31,13 @@ export class AppComponent implements OnDestroy {
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
-    private router: ActivatedRoute,
+    private router: Router,
     public dialog: MatDialog
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    // router.navigate(['dashboard']);
   }
 
   ngOnDestroy(): void {
