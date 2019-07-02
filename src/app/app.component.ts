@@ -47,7 +47,7 @@ export class AppComponent implements OnDestroy {
 
   openProfileDialog() {
     const dialogRef = this.dialog.open(ProfileDialogComponent, {
-      width: '300px',
+      width: '350px',
       panelClass: 'custom-dialog-container',
       position: {top: '57px', right: '10px'},
       data: {name: 'aaaa'}

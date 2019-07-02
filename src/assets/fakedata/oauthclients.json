@@ -1,0 +1,33 @@
+[
+  {
+    "name": "my web application",
+    "creationDate": "2019-06-25",
+    "type": 0,
+    "clientID": "aaaaaaaaaaaa",
+    "authJSOrigins": ["http://localhost/", "https://www.example.com/"],
+    "authRedirectURIs": ["http://localhost/", "https://www.example.com/"]
+  },
+  {
+    "name": "my android client",
+    "creationDate": "2019-06-25",
+    "type": 1,
+    "clientID": "bbbbbbbbbbbb",
+    "signCertFingerprint": "my-fake-signing-certificate-finger-print",
+    "packageName": "com.example"
+  },
+  {
+    "name": "my ios client",
+    "creationDate": "2019-07-01",
+    "type": 2,
+    "clientID": "cccccccccccc",
+    "bundleID": "my-fake-bundle-id",
+    "appStoreID": "my-fake-app-store-id",
+    "teamID": null
+  },
+  {
+    "name": "my oauth client",
+    "creationDate": "2019-07-01",
+    "type": 3,
+    "clientID": "dddddddddddd"
+  }
+]

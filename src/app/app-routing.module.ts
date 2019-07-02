@@ -8,9 +8,11 @@ import {ProfileDialogComponent} from './profile-dialog/profile-dialog.component'
 import {TabCredentialsComponent} from './credentials/tab-credentials/tab-credentials.component';
 import {TabDomainVerfComponent} from './credentials/tab-domain-verf/tab-domain-verf.component';
 import {TabOauthConsentComponent} from './credentials/tab-oauth-consent/tab-oauth-consent.component';
+import {EditOauthClientComponent} from './credentials/edit-oauth-client/edit-oauth-client.component';
+import {EditApikeyComponent} from './edit-apikey/edit-apikey.component';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent, outlet: 'navcontent'},
+  // {path: '', component: DashboardComponent, outlet: 'navcontent'},
   // {path: '', redirectTo: 'dashboard', pathMatch: 'prefix'},
   // {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent, outlet: 'navcontent'},
@@ -22,8 +24,9 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: TabCredentialsComponent,
-        outlet: 'cre_sub'
+        redirectTo: 'cre-tab-credentials',
+        pathMatch: 'full'
+        // outlet: 'cre_sub'
       },
       {
         path: 'cre-tab-credentials',
@@ -38,6 +41,16 @@ const routes: Routes = [
       {
         path: 'cre-tab-domain-verification',
         component: TabDomainVerfComponent,
+        outlet: 'cre_sub'
+      },
+      {
+        path: 'cre-tab-credentials/edit-oauth-client/:clientID',
+        component: EditOauthClientComponent,
+        outlet: 'cre_sub'
+      },
+      {
+        path: 'cre-tab-credentials/edit-apikey',
+        component: EditApikeyComponent,
         outlet: 'cre_sub'
       },
     ]

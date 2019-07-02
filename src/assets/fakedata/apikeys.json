@@ -1,0 +1,14 @@
+[
+  {
+    "name": "my api key 1",
+    "creationDate": "2019-07-01",
+    "restrictions": null,
+    "key": "asdfasdfasdf"
+  },
+  {
+    "name": "my api key 2",
+    "creationDate": "2019-06-25",
+    "restrictions": null,
+    "key": "fdsafdsafdsa"
+  }
+]

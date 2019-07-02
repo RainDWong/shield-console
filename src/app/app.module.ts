@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatSidenavModule} from '@angular/material';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -46,13 +46,17 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LibraryComponent } from './library/library.component';
-import { CredentialsComponent } from './credentials/credentials.component';
-import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
-import { TabCredentialsComponent } from './credentials/tab-credentials/tab-credentials.component';
-import { TabOauthConsentComponent } from './credentials/tab-oauth-consent/tab-oauth-consent.component';
-import { TabDomainVerfComponent } from './credentials/tab-domain-verf/tab-domain-verf.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {LibraryComponent} from './library/library.component';
+import {CredentialsComponent} from './credentials/credentials.component';
+import {ProfileDialogComponent} from './profile-dialog/profile-dialog.component';
+import {TabCredentialsComponent} from './credentials/tab-credentials/tab-credentials.component';
+import {TabOauthConsentComponent} from './credentials/tab-oauth-consent/tab-oauth-consent.component';
+import {TabDomainVerfComponent} from './credentials/tab-domain-verf/tab-domain-verf.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {EditOauthClientComponent} from './credentials/edit-oauth-client/edit-oauth-client.component';
+import { EditApikeyComponent } from './edit-apikey/edit-apikey.component';
 
 
 @NgModule({
@@ -65,9 +69,13 @@ import { TabDomainVerfComponent } from './credentials/tab-domain-verf/tab-domain
     TabCredentialsComponent,
     TabOauthConsentComponent,
     TabDomainVerfComponent,
+    EditOauthClientComponent,
+    EditApikeyComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpClientTestingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -75,6 +83,7 @@ import { TabDomainVerfComponent } from './credentials/tab-domain-verf/tab-domain
     MatToolbarModule,
     MatSidenavModule,
     ReactiveFormsModule,
+    FormsModule,
     MatFormFieldModule,
     A11yModule,
     CdkStepperModule,
@@ -118,6 +127,7 @@ import { TabDomainVerfComponent } from './credentials/tab-domain-verf/tab-domain
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
