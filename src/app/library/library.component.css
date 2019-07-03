@@ -1,0 +1,79 @@
+.content {
+  padding-left: 10px;
+  width: 1000px;
+}
+
+
+.input_search {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 600px;
+}
+
+.div_with_cards_and_title {
+  height: 350px;
+}
+
+.titles {
+  height: 40px;
+  /*margin-bottom: 20px;*/
+}
+
+.title_left {
+  float: left;
+  font-size: 16px;
+}
+
+.view_all {
+  float: right;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.cards {
+  clear: both;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  margin-right: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  float: left;
+  cursor: pointer;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.card:hover {
+  /*height: 200px;*/
+  /*width: 200px;*/
+  /*padding: 20px;*/
+  /*margin-right: 20px;*/
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 8px 4px -4px rgba(0, 0, 0, 0.12);
+}
+
+.card mat-icon {
+  font-size: 48px;
+}
+.card img {
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.description {
+  font-size: 12px;
+  color: #989898;
+}
+.team_name {
+  font-size: 12px;
+  color: #989898;
+  margin-top: 4px;
+}
+
+.api_name {
+  margin-bottom: 4px;
+}

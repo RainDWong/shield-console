@@ -1,3 +1,159 @@
-<p>
-  library works!
-</p>
+<div class="content">
+  <div>
+    <h1>Welcome to the API library</h1>
+    <mat-form-field appearance="legacy">
+      <mat-label>Search for APIs & Services</mat-label>
+      <input matInput placeholder="" class="input_search">
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+  </div>
+  <div style="height: 50px;"></div>
+  <div class="div_with_cards_and_title">
+    <div class="titles">
+      <div class="title_left">核心资源</div>
+      <div class="view_all">
+        <a href="#">
+          VIEW ALL
+        </a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card" (click)="null">
+        <mat-icon color="accent">account_circle</mat-icon>
+        <p class="api_name"><b>用户账户 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询或修改包含用户号、手机号、昵称等在内的用户账户信息，以及更新账户密码等敏感操作</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">account_balance_wallet</mat-icon>
+        <p class="api_name"><b>钱包 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询钱包余额、账单，充值、提现、转账</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">receipt</mat-icon>
+        <p class="api_name"><b>电子券 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询或消费用户的电子券</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">credit_card</mat-icon>
+        <p class="api_name"><b>绑卡 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询、新增、删除用户的绑卡信息</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div_with_cards_and_title">
+    <div class="titles">
+      <div class="title_left">基础能力</div>
+      <div class="view_all">
+        <a href="#">
+          VIEW ALL
+        </a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card" (click)="null">
+        <mat-icon color="accent">sms</mat-icon>
+        <p class="api_name"><b>短信能力 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>发送短信，发送、校验短信验证码</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">face</mat-icon>
+        <p class="api_name"><b>人脸识别 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>人脸检测、人脸特征提取</span></p>
+      </div>
+      <div class="card">
+        <!--        <mat-icon color="accent">perm_identity</mat-icon>-->
+        <mat-icon color="accent">account_box</mat-icon>
+        <p class="api_name"><b>公安信息查询 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询用户在公安系统内的身份证信息</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">account_balance</mat-icon>
+        <p class="api_name"><b>企业征信信息查询 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询企业的征信信息</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div_with_cards_and_title">
+    <div class="titles">
+      <div class="title_left">员工服务</div>
+      <div class="view_all">
+        <a href="#">
+          VIEW ALL
+        </a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card" (click)="null">
+        <img src="../../assets/danghui.svg"/>
+<!--        <object height="48px" width="48px" type="image/svg+xml" data="../../assets/danghui.svg"></object>-->
+        <p class="api_name"><b>党费助手 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>上交党费，查询缴费记录</span></p>
+      </div>
+      <div class="card">
+<!--        <mat-icon color="accent">account_balance_wallet</mat-icon>-->
+        <img src="../../assets/care.svg"/>
+        <p class="api_name"><b>员工慰问 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询慰问金额，提交订单，查询订单状态</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">receipt</mat-icon>
+        <p class="api_name"><b>公会会费 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>上交公会会费，查询缴费记录</span></p>
+      </div>
+      <div class="card">
+<!--        <mat-icon color="accent">receipt</mat-icon>-->
+        <img src="../../assets/give.svg"/>
+        <p class="api_name"><b>爱心公益 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>查询公益活动，捐款</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div_with_cards_and_title">
+    <div class="titles">
+      <div class="title_left">生活服务</div>
+      <div class="view_all">
+        <a href="#">
+          VIEW ALL
+        </a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card" (click)="null">
+        <mat-icon color="accent">account_circle</mat-icon>
+        <p class="api_name"><b>生活缴费 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>使用钱包缴费，包含水费、电费、燃气费等</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">credit_card</mat-icon>
+        <p class="api_name"><b>信用卡还款 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>通过银行卡、账户余额等方式为信用卡还款</span></p>
+      </div>
+      <div class="card">
+        <mat-icon color="accent">receipt</mat-icon>
+        <p class="api_name"><b>话费服务 API</b></p>
+        <p class="team_name"><span>技术部</span></p>
+        <p class="description"><span>话费的充值、转让，签订话费代扣协议</span></p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
