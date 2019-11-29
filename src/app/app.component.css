@@ -44,6 +44,7 @@
 .sidenav-left a {
   /*font-size: 15px;*/
   margin-right: 20px;
+  width: 250px;
 }
 .sidenav-left mat-icon {
   margin-right: 20px;

@@ -1,3 +1,54 @@
-<p>
-  dashboard works!
-</p>
+<div class="div_dashboard">
+  <!--  <div echarts [options]="option" class="chart"></div>-->
+  <div class="div_button_group">
+    <mat-button-toggle-group appearance="legacy">
+      <mat-button-toggle>1 hour</mat-button-toggle>
+      <mat-button-toggle>6 hours</mat-button-toggle>
+      <mat-button-toggle>12 hours</mat-button-toggle>
+      <mat-button-toggle>1 day</mat-button-toggle>
+      <mat-button-toggle>2 days</mat-button-toggle>
+      <mat-button-toggle>4 days</mat-button-toggle>
+      <mat-button-toggle>7 days</mat-button-toggle>
+      <mat-button-toggle>14 days</mat-button-toggle>
+      <mat-button-toggle>30 days</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="clear_float"></div>
+  <div class="div_charts">
+    <!-- traffic -->
+    <div class="div_chart_one">
+<!--      <div class="div_titles">-->
+<!--        <div class="chart_title">Traffic</div>-->
+<!--        <div class="get_app_symbol"><button mat-icon-button><mat-icon>get_app</mat-icon></button></div>-->
+<!--      </div>-->
+      <div class="clear_float"></div>
+      <div class="div_chart2">
+        <div echarts [options]="optionTraffic" class="chart"></div>
+      </div>
+    </div>
+    <!-- errors -->
+    <div class="div_chart_one">
+<!--      <div class="div_titles">-->
+<!--        <div class="chart_title">Errors</div>-->
+<!--        <div class="get_app_symbol"><button mat-icon-button><mat-icon>get_app</mat-icon></button></div>-->
+<!--      </div>-->
+      <div class="clear_float"></div>
+      <div class="div_chart2">
+        <div echarts [options]="optionErrors" class="chart"></div>
+      </div>
+    </div>
+
+    <!-- errors -->
+    <div class="div_chart_one">
+<!--      <div class="div_titles">-->
+<!--        <div class="chart_title">Median Latency</div>-->
+<!--        <div class="get_app_symbol"><button mat-icon-button><mat-icon>get_app</mat-icon></button></div>-->
+<!--      </div>-->
+      <div class="clear_float"></div>
+      <div class="div_chart2">
+        <div echarts [options]="optionMedianLatency" class="chart"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

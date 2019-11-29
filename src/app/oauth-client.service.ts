@@ -38,6 +38,26 @@ export class OauthClientService {
       teamID: null
     },
     {
+      name: 'ios client 2',
+      creationDate: '2019-07-01',
+      type: 2,
+      clientID: 'adc239b5-fcc7-4ec1-8c68-a85a4423c379',
+      secret: 'fake_secret',
+      bundleID: 'my-fake-bundle-id',
+      appStoreID: 'my-fake-app-store-id',
+      teamID: null
+    },
+    {
+      name: 'ios client 3',
+      creationDate: '2019-07-01',
+      type: 2,
+      clientID: 'c17d1831-145c-4697-9ee6-8ad94f0ea955',
+      secret: 'fake_secret',
+      bundleID: 'my-fake-bundle-id',
+      appStoreID: 'my-fake-app-store-id',
+      teamID: null
+    },
+    {
       name: 'oauth client',
       creationDate: '2019-07-01',
       type: 3,

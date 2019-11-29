@@ -1,15 +1,15 @@
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ActivatedRoute, Router} from '@angular/router';
-import {MatDialog} from '@angular/material';
-import {ProfileDialogComponent} from './profile-dialog/profile-dialog.component';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy, OnInit {
   title = 'shield-console';
   mobileQuery: MediaQueryList;
 
@@ -19,7 +19,7 @@ export class AppComponent implements OnDestroy {
   //   'Credentials'
   // ];
 
-  fillerContent = Array.from({length: 50}, () =>
+  fillerContent = Array.from({ length: 50 }, () =>
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -40,6 +40,10 @@ export class AppComponent implements OnDestroy {
     // router.navigate(['dashboard']);
   }
 
+  ngOnInit(): void {
+    // this.router.navigate([{outlets: {navcontent: ['dashboard']}}]);
+  }
+
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
@@ -49,12 +53,13 @@ export class AppComponent implements OnDestroy {
     const dialogRef = this.dialog.open(ProfileDialogComponent, {
       width: '350px',
       panelClass: 'custom-dialog-container',
-      position: {top: '57px', right: '10px'},
-      data: {name: 'aaaa'}
+      position: { top: '57px', right: '10px' },
+      data: { name: 'aaaa' }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
+
 }

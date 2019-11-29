@@ -1,0 +1,65 @@
+<div>
+  <mat-toolbar>
+    <a mat-icon-button color="primary" (click)="goBack()">
+      <mat-icon>keyboard_backspace</mat-icon>
+    </a>
+    <span>API Library</span>
+  </mat-toolbar>
+  <div class="div_under_toolbar">
+
+    <div class="div_avatar">
+      <mat-icon class="avatar" color="accent">account_circle</mat-icon>
+    </div>
+    <div class="inline-block">
+      <p class="api_name"><b>用户账户 API</b></p>
+      <p class="team_name">技术部</p>
+      <p class="description">查询或修改包含用户号、手机号、昵称等在内的用户账户信息，以及更新账户密码等敏感操作</p>
+      <button mat-flat-button color="primary" class="bt">
+        <span>MANAGE</span>
+      </button>
+      <button mat-stroked-button color="primary" class="bt">
+        <span>TRY THIS API</span>
+      </button>
+      <span class="api_enabled">
+        <mat-icon color="primary" inline="inline">check_circle</mat-icon>
+        <span>API enabled</span>
+      </span>
+    </div>
+
+  </div>
+</div>
+<div style="clear: both;"></div>
+<div>
+  <div class="example-container">
+    <div class="nav_left">
+      <p>&nbsp;</p>
+      <p><b>Category</b></p>
+      <p>用户基础数据</p>
+      <br />
+      <p><b>Service name</b></p>
+      <p>account.example.com</p>
+    </div>
+    <div class="nav_right">
+      <section>
+        <p><b>概览</b></p>
+        <p>用户账户API可以让你查询用户的基本账户信息以及修改它们，这些信息包含用户号、昵称、手机号等等，以及更新账户密码的敏感操作</p>
+      </section>
+      <section>
+        <p><b>关于技术部</b></p>
+        <p>这里是有关于技术部的简介</p>
+      </section>
+      <section>
+        <p><b>教程与文档</b></p>
+        <p><a href="#">Learn more
+            <mat-icon inline="inline">call_made</mat-icon>
+          </a></p>
+      </section>
+      <section>
+        <p><b>维护与支持</b></p>
+        <p><a href="#">Learn more
+            <mat-icon inline="inline">call_made</mat-icon>
+          </a></p>
+      </section>
+    </div>
+  </div>
+</div>

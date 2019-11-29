@@ -11,7 +11,7 @@
   <div style="height: 50px;"></div>
   <div class="div_with_cards_and_title">
     <div class="titles">
-      <div class="title_left">核心资源</div>
+      <div class="title_left">用户基础数据</div>
       <div class="view_all">
         <a href="#">
           VIEW ALL
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="cards">
-      <div class="card" (click)="null">
+      <div class="card" [routerLink]="'lib-detail'">
         <mat-icon color="accent">account_circle</mat-icon>
         <p class="api_name"><b>用户账户 API</b></p>
         <p class="team_name"><span>技术部</span></p>
@@ -97,7 +97,7 @@
       <div class="card" (click)="null">
         <img src="../../assets/danghui.svg"/>
 <!--        <object height="48px" width="48px" type="image/svg+xml" data="../../assets/danghui.svg"></object>-->
-        <p class="api_name"><b>党费助手 API</b></p>
+        <p class="api_name"><b>党费服务 API</b></p>
         <p class="team_name"><span>技术部</span></p>
         <p class="description"><span>上交党费，查询缴费记录</span></p>
       </div>
@@ -109,7 +109,7 @@
         <p class="description"><span>查询慰问金额，提交订单，查询订单状态</span></p>
       </div>
       <div class="card">
-        <mat-icon color="accent">receipt</mat-icon>
+        <mat-icon color="accent">stars</mat-icon>
         <p class="api_name"><b>公会会费 API</b></p>
         <p class="team_name"><span>技术部</span></p>
         <p class="description"><span>上交公会会费，查询缴费记录</span></p>
@@ -135,7 +135,7 @@
     </div>
     <div class="cards">
       <div class="card" (click)="null">
-        <mat-icon color="accent">account_circle</mat-icon>
+        <mat-icon color="accent">local_atm</mat-icon>
         <p class="api_name"><b>生活缴费 API</b></p>
         <p class="team_name"><span>技术部</span></p>
         <p class="description"><span>使用钱包缴费，包含水费、电费、燃气费等</span></p>
@@ -147,7 +147,7 @@
         <p class="description"><span>通过银行卡、账户余额等方式为信用卡还款</span></p>
       </div>
       <div class="card">
-        <mat-icon color="accent">receipt</mat-icon>
+        <mat-icon color="accent">call</mat-icon>
         <p class="api_name"><b>话费服务 API</b></p>
         <p class="team_name"><span>技术部</span></p>
         <p class="description"><span>话费的充值、转让，签订话费代扣协议</span></p>

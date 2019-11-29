@@ -10,13 +10,25 @@ import {TabDomainVerfComponent} from './credentials/tab-domain-verf/tab-domain-v
 import {TabOauthConsentComponent} from './credentials/tab-oauth-consent/tab-oauth-consent.component';
 import {EditOauthClientComponent} from './credentials/edit-oauth-client/edit-oauth-client.component';
 import {EditApikeyComponent} from './edit-apikey/edit-apikey.component';
+import {CommonModule} from '@angular/common';
+import {LibraryDetailComponent} from './library/library-detail/library-detail.component';
 
 const routes: Routes = [
-  // {path: '', component: DashboardComponent, outlet: 'navcontent'},
-  // {path: '', redirectTo: 'dashboard', pathMatch: 'prefix'},
-  // {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent, outlet: 'navcontent'},
-  {path: 'library', component: LibraryComponent, outlet: 'navcontent'},
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    outlet: 'navcontent'
+  },
+  {
+    path: 'library',
+    component: LibraryComponent,
+    outlet: 'navcontent',
+  },
+  {
+    path: 'library/lib-detail',
+    component: LibraryDetailComponent,
+    outlet: 'navcontent'
+  },
   {
     path: 'credentials',
     component: CredentialsComponent,
@@ -29,9 +41,16 @@ const routes: Routes = [
         // outlet: 'cre_sub'
       },
       {
+        path: 'credentials',
+        redirectTo: 'cre-tab-credentials',
+        pathMatch: 'full'
+        // outlet: 'cre_sub'
+      },
+      {
         path: 'cre-tab-credentials',
         component: TabCredentialsComponent,
-        outlet: 'cre_sub'
+        outlet: 'cre_sub',
+
       },
       {
         path: 'cre-tab-oauth-consent-screen',
@@ -92,10 +111,19 @@ const routes: Routes = [
 //   {path: 'profile-dialog', component: ProfileDialogComponent, outlet: 'navcontent'},
 // ];
 
+// const childRoutes: Routes = [
+//   {
+//     path: 'cre-tab-credentials',
+//     component: TabCredentialsComponent,
+//     outlet: 'cre_sub'
+//   },
+// ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    // RouterModule.forChild(childroutes)
+    // RouterModule.forChild(childRoutes),
+    CommonModule
   ],
   exports: [RouterModule]
 })
